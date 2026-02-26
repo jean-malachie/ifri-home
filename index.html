@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Institut de Formation et de Recherche en Informatique (IFRI) — Université d'Abomey-Calavi" />
+  <title>IFRI — Accueil (maquette améliorée)</title>
+
+  <!--
+    ✅ Aucun lien externe :
+    - Pas de Google Fonts / CDN
+    - Pas de librairies externes
+    - Images locales (assets/img/*)
+  -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- =======================
+       Skip link (accessibilité)
+       ======================= -->
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- =======================
+       Header / Navigation
+       ======================= -->
+  <header class="site-header" data-elevate>
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Accueil IFRI">
+        <img class="brand__logo" src="assets/img/logoifri.png" alt="Logo IFRI" />
+        <div class="brand__text">
+          <span class="brand__name">IFRI</span>
+          <span class="brand__tag">Université d'Abomey-Calavi</span>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="nav nav--desktop" aria-label="Navigation principale">
+        <a class="nav__link" href="#formations">Formations</a>
+        <a class="nav__link" href="#recherche">Recherche</a>
+        <a class="nav__link" href="#actualites">Actualités</a>
+        <a class="nav__link" href="#admission">Admission</a>
+        <a class="nav__link" href="#partenaires">Partenaires</a>
+        <a class="nav__link" href="#temoignages">Témoignages</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
+
+      <!-- CTA -->
+      <div class="header__actions">
+        <a class="btn btn--primary btn--sm" href="#admission">Découvrir nos formations</a>
+
+        <!-- Mobile toggle -->
+        <button class="icon-btn nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav">
+          <span class="icon-btn__bar"></span>
+          <span class="icon-btn__bar"></span>
+          <span class="icon-btn__bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav panel -->
+    <div class="nav nav--mobile" id="mobileNav" hidden>
+      <div class="container nav--mobile__inner">
+        <a class="nav__link" href="#formations">Formations</a>
+        <a class="nav__link" href="#recherche">Recherche</a>
+        <a class="nav__link" href="#actualites">Actualités</a>
+        <a class="nav__link" href="#admission">Admission</a>
+        <a class="nav__link" href="#partenaires">Partenaires</a>
+        <a class="nav__link" href="#temoignages">Témoignages</a>
+        <a class="nav__link" href="#contact">Contact</a>
+
+        <a class="btn btn--primary" href="#admission">Découvrir nos formations</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =======================
+       Hero
+       ======================= -->
+  <section id="top" class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="pill">
+          Institut de Formation et de Recherche en Informatique (IFRI)
+        </p>
+
+        <h1 class="hero__title">
+          Débutez votre carrière dans un domaine prometteur
+          <span class="hero__title-accent">dès maintenant.</span>
+        </h1>
+
+        <p class="hero__subtitle">
+          Une formation rigoureuse, orientée pratique, innovation et recherche — au cœur de l’UAC.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#formations">Voir les formations</a>
+          <a class="btn btn--ghost" href="#actualites">Voir les actualités</a>
+        </div>
+
+        <dl class="hero__stats" aria-label="Chiffres clés">
+          <div class="stat">
+            <dt>Étudiants</dt>
+            <dd><span class="js-count" data-target="1217">0</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Formations</dt>
+            <dd><span class="js-count" data-target="9">0</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Distinctions</dt>
+            <dd><span class="js-count" data-target="9">0</span></dd>
+          </div>
+        </dl>
+
+        <p class="hero__note">
+          *Chiffres indicatifs repris de la page d’accueil actuelle.
+        </p>
+      </div>
+
+      <!-- Right card (actualité highlight) -->
+      <aside class="hero__card" aria-label="À la une">
+        <div class="hero__card-head">
+          <span class="hero__card-kicker">À la une</span>
+          <span class="hero__card-badge">Actualités</span>
+        </div>
+        <h2 class="hero__card-title">Master 2024–2025</h2>
+        <p class="hero__card-meta">18/06/2024</p>
+        <p class="hero__card-text">
+          Infos d’admission, calendrier et conditions — dans une page dédiée.
+        </p>
+        <a class="btn btn--sm btn--primary" href="#admission">Aller à l’admission</a>
+
+        <div class="hero__card-divider" role="presentation"></div>
+
+        <div class="hero__card-mini">
+          <div class="mini-dot" aria-hidden="true"></div>
+          <div>
+            <p class="mini-title">Licence 2024–2025</p>
+            <p class="mini-meta">18/06/2024</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- =======================
+         Quick value props
+         ======================= -->
+    <section class="section" id="formations">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title">Une formation pensée pour l’impact</h2>
+          <p class="section__subtitle">
+            Trois piliers mis en avant sur le site IFRI : innovation, recherche et certifications.
+          </p>
+        </header>
+
+        <div class="grid grid--3 cards">
+          <article class="card">
+            <div class="card__icon">
+              <img src="assets/img/icon-innovation.png" alt="" aria-hidden="true" />
+            </div>
+            <h3 class="card__title">Innovation</h3>
+            <p class="card__text">
+              Développer des solutions concrètes : produits, prototypes, entrepreneuriat et impact local.
+            </p>
+          </article>
+
+          <article class="card" id="recherche">
+            <div class="card__icon">
+              <img src="assets/img/icon-recherche.png" alt="" aria-hidden="true" />
+            </div>
+            <h3 class="card__title">Recherche</h3>
+            <p class="card__text">
+              Un environnement propice aux travaux scientifiques, à l’expérimentation et aux projets.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">
+              <img src="assets/img/icon-certification.png" alt="" aria-hidden="true" />
+            </div>
+            <h3 class="card__title">Certification</h3>
+            <p class="card__text">
+              Des parcours enrichis de certifications (réseau, cybersécurité, systèmes, etc.).
+            </p>
+          </article>
+        </div>
+
+        <div class="split">
+          <div class="split__left">
+            <h3 class="split__title">Catalogue (exemple)</h3>
+            <p class="split__text">
+              Cette maquette met l’accent sur la lisibilité et une hiérarchie visuelle claire.
+              Tu peux remplacer ces éléments par le catalogue complet.
+            </p>
+
+            <ul class="checklist" aria-label="Points forts">
+              <li>Navigation plus simple, CTA visibles</li>
+              <li>Meilleur rendu PC (grille, espacements, typographie)</li>
+              <li>Responsive mobile/desktop sans framework</li>
+              <li>Composants réutilisables (cards, badges, boutons)</li>
+            </ul>
+          </div>
+
+          <div class="split__right">
+            <figure class="media">
+              <img src="assets/img/video_poster.png" alt="Étudiants IFRI - visuel" />
+              <figcaption class="media__caption">
+                Carte média (image locale) — tu peux la remplacer par une vraie vidéo plus tard.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+         Actualités
+         ======================= -->
+    <section class="section section--alt" id="actualites">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title">Actualités</h2>
+          <p class="section__subtitle">
+            Sélection d’articles présents sur la page d’accueil.
+          </p>
+
+          <div class="chips" role="tablist" aria-label="Filtrer les actualités">
+            <button class="chip is-active" type="button" data-filter="all" role="tab" aria-selected="true">Tout</button>
+            <button class="chip" type="button" data-filter="admission" role="tab" aria-selected="false">Admission</button>
+            <button class="chip" type="button" data-filter="evenement" role="tab" aria-selected="false">Évènement</button>
+            <button class="chip" type="button" data-filter="annonce" role="tab" aria-selected="false">Annonce</button>
+          </div>
+        </header>
+
+        <div class="grid grid--3 news" aria-live="polite">
+          <article class="news-card" data-kind="evenement">
+            <div class="news-card__body">
+              <p class="news-card__date">14/02/2022</p>
+              <h3 class="news-card__title">Cérémonie de remise de diplôme de Licence et de Master</h3>
+              <p class="news-card__text">Retour sur un moment fort de la communauté IFRI.</p>
+            </div>
+            <a class="news-card__link" href="#contact">En savoir plus</a>
+          </article>
+
+          <article class="news-card" data-kind="admission">
+            <div class="news-card__body">
+              <p class="news-card__date">18/06/2024</p>
+              <h3 class="news-card__title">Master 2024–2025</h3>
+              <p class="news-card__text">Informations clés et orientation pour candidater.</p>
+            </div>
+            <a class="news-card__link" href="#admission">Voir admission</a>
+          </article>
+
+          <article class="news-card" data-kind="admission">
+            <div class="news-card__body">
+              <p class="news-card__date">18/06/2024</p>
+              <h3 class="news-card__title">Licence 2024–2025</h3>
+              <p class="news-card__text">Conditions et étapes pour intégrer l’IFRI.</p>
+            </div>
+            <a class="news-card__link" href="#admission">Voir admission</a>
+          </article>
+
+          <article class="news-card" data-kind="evenement">
+            <div class="news-card__body">
+              <p class="news-card__date">09/12/2022</p>
+              <h3 class="news-card__title">Benin Workshop on Artificial Intelligence (BWAI 2022)</h3>
+              <p class="news-card__text">Ateliers et partages autour de l’IA.</p>
+            </div>
+            <a class="news-card__link" href="#contact">En savoir plus</a>
+          </article>
+
+          <article class="news-card" data-kind="evenement">
+            <div class="news-card__body">
+              <p class="news-card__date">17/02/2022</p>
+              <h3 class="news-card__title">BWAI-21 — 2ème édition (20–24 déc. 2021)</h3>
+              <p class="news-card__text">Annonce et informations de participation.</p>
+            </div>
+            <a class="news-card__link" href="#contact">En savoir plus</a>
+          </article>
+
+          <article class="news-card" data-kind="annonce">
+            <div class="news-card__body">
+              <p class="news-card__date">—</p>
+              <h3 class="news-card__title">Découvrez nos formations</h3>
+              <p class="news-card__text">Programme, parcours et débouchés : tout est regroupé.</p>
+            </div>
+            <a class="news-card__link" href="#formations">Explorer</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+         Mot du directeur (résumé)
+         ======================= -->
+    <section class="section">
+      <div class="container">
+        <div class="panel">
+          <div class="panel__content">
+            <h2 class="panel__title">Mot du directeur</h2>
+            <p class="panel__text">
+              La vocation de l’IFRI est de former des apprenants capables de devenir des acteurs de solutions
+              informatiques aux problèmes de société, en s’appuyant sur les technologies de l’information et
+              de la communication.
+            </p>
+            <p class="panel__text panel__text--muted">
+              (Extrait résumé — tu peux remplacer par le texte complet.)
+            </p>
+
+            <div class="panel__cta">
+              <a class="btn btn--primary" href="#contact">Contacter l’IFRI</a>
+              <a class="btn btn--ghost" href="#partenaires">Voir les partenaires</a>
+            </div>
+          </div>
+
+          <div class="panel__visual" aria-hidden="true">
+            <div class="panel__visual-card">
+              <p class="kpi__label">Objectif</p>
+              <p class="kpi__value">Excellence</p>
+              <p class="kpi__hint">Formation • Recherche • Innovation</p>
+            </div>
+            <div class="panel__visual-card panel__visual-card--outline">
+              <p class="kpi__label">Approche</p>
+              <p class="kpi__value">Pratique</p>
+              <p class="kpi__hint">Projets & pédagogie active</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+         Statistiques + Admission
+         ======================= -->
+    <section class="section section--alt" id="admission">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title">Admission & chiffres clés</h2>
+          <p class="section__subtitle">
+            Une section plus claire, pensée pour convertir sur PC (CTA, infos, preuve sociale).
+          </p>
+        </header>
+
+        <div class="grid grid--4 kpis">
+          <div class="kpi">
+            <p class="kpi__label">Étudiants</p>
+            <p class="kpi__value"><span class="js-count" data-target="1217">0</span></p>
+          </div>
+          <div class="kpi">
+            <p class="kpi__label">Admis</p>
+            <p class="kpi__value"><span class="js-count" data-target="1191">0</span></p>
+          </div>
+          <div class="kpi">
+            <p class="kpi__label">Licences</p>
+            <p class="kpi__value"><span class="js-count" data-target="6">0</span></p>
+          </div>
+          <div class="kpi">
+            <p class="kpi__label">Masters</p>
+            <p class="kpi__value"><span class="js-count" data-target="3">0</span></p>
+          </div>
+        </div>
+
+        <div class="cta-banner" role="region" aria-label="Bloc admission">
+          <div class="cta-banner__text">
+            <h3 class="cta-banner__title">Prêt(e) à candidater ?</h3>
+            <p class="cta-banner__subtitle">
+              Télécharge le dossier, prépare tes pièces, et contacte l’administration pour valider ta procédure.
+            </p>
+          </div>
+
+          <div class="cta-banner__actions">
+            <a class="btn btn--primary" href="#contact">Demander les infos</a>
+            <a class="btn btn--ghost" href="#formations">Voir le programme</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+         Partenaires
+         ======================= -->
+    <section class="section" id="partenaires">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title">Nos partenaires</h2>
+          <p class="section__subtitle">
+            Logos enregistrés sur le site IFRI (chargés localement ici).
+          </p>
+        </header>
+
+        <div class="partners" role="list">
+          <div class="partner" role="listitem"><img src="assets/img/partner-uclouvain.png" alt="UCLouvain" /></div>
+          <div class="partner" role="listitem"><img src="assets/img/partner-eneam.png" alt="ENEAM" /></div>
+          <div class="partner" role="listitem"><img src="assets/img/partner-epac.png" alt="EPAC" /></div>
+          <div class="partner" role="listitem"><img src="assets/img/partner-imsp.png" alt="IMSP" /></div>
+          <div class="partner" role="listitem"><img src="assets/img/partner-danktic.png" alt="Danktic Consulting" /></div>
+          <div class="partner" role="listitem"><img src="assets/img/partner-opensi.png" alt="OPENSI" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+         Témoignages (slider léger)
+         ======================= -->
+    <section class="section section--alt" id="temoignages">
+      <div class="container">
+        <header class="section__head section__head--row">
+          <div>
+            <h2 class="section__title">Nos étudiants témoignent</h2>
+            <p class="section__subtitle">Slider simple, fluide, sans librairie.</p>
+          </div>
+
+          <div class="slider-controls" aria-label="Contrôles témoignages">
+            <button class="icon-btn icon-btn--round" type="button" data-slider="prev" aria-label="Témoignage précédent">‹</button>
+            <button class="icon-btn icon-btn--round" type="button" data-slider="next" aria-label="Témoignage suivant">›</button>
+          </div>
+        </header>
+
+        <div class="slider" data-slider="root">
+          <div class="slider__track" data-slider="track">
+            <article class="quote" data-slider="item">
+              <img class="quote__avatar" src="assets/img/temoin-1.jpg" alt="Photo de CODJIA DÉBORA FIFAMÈ" />
+              <blockquote class="quote__text">
+                “Je me suis inscrite en licence professionnelle de Sécurité Informatique à IFRI car ici on a accès à une formation de qualité et une bonne ambiance de travail.”
+              </blockquote>
+              <p class="quote__name">CODJIA DÉBORA FIFAMÈ</p>
+              <p class="quote__role">Étudiante en Sécurité Informatique</p>
+            </article>
+
+            <article class="quote" data-slider="item">
+              <img class="quote__avatar" src="assets/img/temoin-2.jpg" alt="Photo de OROU BADE Aïchatou" />
+              <blockquote class="quote__text">
+                “IFRI est la meilleure école informatique du Bénin, par excellence. Formation hyper rigoureuse : on apprend énormément.”
+              </blockquote>
+              <p class="quote__name">OROU BADE Aïchatou</p>
+              <p class="quote__role">Étudiante en fin de formation</p>
+            </article>
+
+            <article class="quote" data-slider="item">
+              <img class="quote__avatar" src="assets/img/temoin-3.jpg" alt="Photo de MICHOAGAN Hospice" />
+              <blockquote class="quote__text">
+                “Programme académique rigoureux qui met au défi chaque jour. Très bon choix pour progresser.”
+              </blockquote>
+              <p class="quote__name">MICHOAGAN Hospice</p>
+              <p class="quote__role">Technicien en Sécurité Informatique</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+         Contact (sans lien externe)
+         ======================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__subtitle">
+            Formulaire local (sans backend). Tu peux ensuite le connecter à un serveur / email.
+          </p>
+        </header>
+
+        <div class="contact">
+          <form class="form" id="contactForm">
+            <div class="form__row">
+              <label class="field">
+                <span class="field__label">Nom</span>
+                <input class="field__input" name="name" required placeholder="Votre nom" />
+              </label>
+
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__input" name="email" type="email" required placeholder="vous@exemple.com" />
+              </label>
+            </div>
+
+            <label class="field">
+              <span class="field__label">Sujet</span>
+              <input class="field__input" name="subject" required placeholder="Admission, partenariat, information..." />
+            </label>
+
+            <label class="field">
+              <span class="field__label">Message</span>
+              <textarea class="field__input field__input--textarea" name="message" required placeholder="Votre message..."></textarea>
+            </label>
+
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit">Envoyer</button>
+              <p class="form__hint" id="formHint" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <aside class="contact__aside">
+            <div class="info-card">
+              <h3 class="info-card__title">Adresse</h3>
+              <p class="info-card__text">
+                Université d'Abomey-Calavi (UAC)<br />
+                Institut de Formation et de Recherche en Informatique (IFRI)
+              </p>
+
+              <h3 class="info-card__title">Horaires</h3>
+              <p class="info-card__text">Lun–Ven : 08:00–17:00</p>
+
+              <div class="info-card__divider"></div>
+
+              <p class="info-card__muted">
+                Astuce : si tu veux un vrai envoi email “sans backend”, on peut générer un mailto:,
+                mais ça ouvre l’app mail de l’utilisateur (pas idéal). Le mieux = petit backend.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================
+       Footer
+       ======================= -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img class="footer__logo" src="assets/img/logoifri.png" alt="Logo IFRI" />
+        <p class="footer__text">
+          IFRI — Institut de Formation et de Recherche en Informatique<br />
+          Université d'Abomey-Calavi
+        </p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Liens footer (internes)">
+        <a href="#formations">Formations</a>
+        <a href="#actualites">Actualités</a>
+        <a href="#admission">Admission</a>
+        <a href="#partenaires">Partenaires</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <p class="footer__copy">© <span id="year"></span> IFRI — Maquette améliorée (sans liens externes)</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>
